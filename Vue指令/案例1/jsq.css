@@ -1,0 +1,10 @@
+
+.input-num button{
+  width: 60px;
+  height: 30px;
+  color: red;
+  border: solid 0px;
+}
+.input-num span{
+  margin: 0px 20px;
+}

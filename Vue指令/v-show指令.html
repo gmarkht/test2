@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>v-show指令</title>
+</head>
+<body>
+  <div id="app">
+    <input type="button" value="切换显示状态" @click="changeIsShow">
+    <img src="image/Yo.jpg" v-show="isShow" >
+  </div>
+  <script>
+    var app = new Vue({
+      el:"#app",
+      data:{
+        isShow:false
+      },
+      methods: {
+        changeIsShow:function(){
+          this.isShow = !this.isShow;
+        }
+      }
+    })
+  </script>
+</body>
+</html>

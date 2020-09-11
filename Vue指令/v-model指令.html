@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+<div id="app">
+  <input type="button" value="修改msg" @click="setM">
+  <input type="text" v-model="msg" @keyup.enter="getM">
+  <h2>{{msg}}</h2>
+</div>
+  <script>
+    var app = new Vue({
+      el:"#app",
+      data:{
+        msg:"我爱敲代码"
+      },
+      methods: {
+        getM:function(){
+          alert(this.msg)
+        },
+        setM:function(){
+          this.msg="Hello"
+        }
+      }
+    })
+  </script>
+</body>
+</html>

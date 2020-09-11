@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+  <body>
+    <div id="app">
+      <span>{{message}}</span>
+      <h2>{{school.name}} {{school.mobile}}</h2>
+      <ul>
+        <li>{{compus[0]}}</li>
+        <li>{{compus[1]}}</li>
+        <li>{{compus[2]}}</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+        message: 'Hello Vue!',
+        school:{
+          name:"重庆XXX",
+          mobile:"123456789"
+        },
+         compus:["1校区","2校区","3校区"]
+        }
+      })
+  </script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="button" value="切换显示" @click="changeIsShow">
+    <p v-if="isShow">我爱敲代码</p>
+    <p v-show="isShow">我爱敲代码 - v-show修饰</p> 
+    <h2 v-if="temp>=35">热死啦</h2>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el:"#app",
+      data:{
+        isShow:false,
+        temp:20
+      },
+      methods: {
+        changeIsShow:function(){
+          this.isShow = !this.isShow;
+        }
+      }
+    })
+  </script>
+</body>
+</html>

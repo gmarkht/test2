@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>v-for指令</title>
+</head>
+<body>
+<div id="app">
+  <input type="button" value="添加数据" @click="add">
+  <input type="button" value="移除数据" @click="remove">
+  <ul>
+    <li v-for="it,index in arr">
+        {{index+1}}---{{it}}
+    </li>
+  </ul>
+  <h2 v-for="item in vege" v-bind:title="item.name">
+    {{item.name}}
+  </h2>
+</div>
+  <script>
+    var app = new Vue({
+      el:"#app",
+      data:{
+        arr:["北京","上海","广州","深证"],
+        vege:[
+          {name:"我爱敲代码"},
+          {name:"我爱学习"}
+        ]
+      },
+      methods: {
+        add:function(){
+          this.vege.push({name:"我超爱敲代码"})
+        },
+        remove:function(){
+          this.vege.shift();
+        }
+      }
+    })
+  </script>
+</body>
+</html>
